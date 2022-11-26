@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="zh-cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>git | Hexo</title><meta name="keywords" content="git"><meta name="author" content="shenqiangle"><meta name="copyright" content="shenqiangle"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Git入门">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="https://shenqiangle.github.io/post/518e617c.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Git入门">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-08-31T04:30:43.000Z">
+<meta property="article:modified_time" content="2022-10-31T12:14:52.082Z">
+<meta property="article:author" content="shenqiangle">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://shenqiangle.github.io/post/518e617c"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'git',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-10-31 20:14:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">git</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-08-31T04:30:43.000Z" title="Created 2022-08-31 12:30:43">2022-08-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-10-31T12:14:52.082Z" title="Updated 2022-10-31 20:14:52">2022-10-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="git"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>Git入门</p>
+<span id="more"></span>
+
+<p>Git上传文件到Github(最详细)<br>大致步骤<br>本地仓库：</p>
+<p>a. git init 在本地创建一个Git仓库；</p>
+<p>b. git add . 将项目添加到暂存区；</p>
+<p>c. git commit -m “注释内容” 将项目提交到Git仓库；</p>
+<p>远程仓库：</p>
+<p>a. 添加SSH KEY；</p>
+<p>b. 新建repositories；</p>
+<p>本地仓库：</p>
+<p>a. git remote add origin <a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;">&#103;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#111;&#109;</a>:UserName&#x2F;projectName.git 将本地仓库与远程仓库关联；</p>
+<p>b. git push -u origin master 将本地项目推送到远程仓库。</p>
+<p>详细步骤<br>进入需要上传的项目所在的文件夹，如图：<br>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-zg1kVPdL-1626577095172)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863920)]">https://segmentfault.com/img/remote/1460000022863920)]</a></p>
+<p>按住shift键+鼠标右键，打开Git bash(Git安装教程（windows）），如图所示：<br>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-1tqpeqXQ-1626577095175)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863922)]">https://segmentfault.com/img/remote/1460000022863922)]</a></p>
+<p>设置用户信息（用户名，邮箱）。<br>此步骤一般时刚刚安装完Git后设置的，此【用户信息】是以后你每次 Git 的提交都会使用这些信息。在 Git 终端输入一下命令即可设置你的用户信息。</p>
+<p>$ git config –global user.name “name”<br>$ git config –global user.email “<a href="mailto:&#101;&#109;&#97;&#x69;&#108;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#109;&#97;&#x69;&#108;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>“<br>1<br>2<br>可以通过以下命令，查看当前的设置：</p>
+<p>$ git config –list<br>1<br>如果已经设置，则跳过到下一步。</p>
+<p>新建一个空的Git仓库（本地仓库）。<br>运行以下命令：</p>
+<p>$ git init<br>1<br>可以看到Git已经把该路径变成一个Git仓库，所以之后不能再修改当前文件夹的名称，否则会有出错。</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-rRdg8w6M-1626577095177)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863917)]">https://segmentfault.com/img/remote/1460000022863917)]</a></p>
+<p>同时，当前目录新增了一个.git文件夹（如果没有看到，可能是window把它隐藏了），如图：</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-ZUnZRl8E-1626577095179)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863915)]">https://segmentfault.com/img/remote/1460000022863915)]</a></p>
+<p>注意：此时的Git仓库还是一个空的仓库，即使当前已经有其他文件了，但是仅仅在本地而已。</p>
+<p>可以以下命令，查看当前的状态</p>
+<p>$ git status<br>1<br>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-B1imtyEd-1626577095181)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863918)]">https://segmentfault.com/img/remote/1460000022863918)]</a></p>
+<p>将项目文件添加到本地仓库的暂存区（还没有真正添加到本地的Git仓库）<br>通过命令：</p>
+<p>$ git add README.md<br>1<br>运行完上面的命令后，我们可以再通过git status查看当前的状态：</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-nBpc2L5R-1626577095182)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863923)]">https://segmentfault.com/img/remote/1460000022863923)]</a></p>
+<p>好了，发现README.md文件已经成功添加到。</p>
+<p>如果需要把当前目录的所有文件都添加到暂存区的话，可以使用命令：</p>
+<p>$ git add .<br>1<br>PS：add后面跟着一个空格，再跟一个点。</p>
+<p>Q1：如果不小心把不需要的文件添加到暂存区，怎么撤回？</p>
+<p>比如我不小心把依赖包文件夹node_modules（这个很大而且没必要git管理这份代码）add了，怎么撤回这个文件？</p>
+<p>第一种方法：</p>
+<p>$ git reset HEAD – node_modules<br>1<br>注意：双杠–后面有一个空格，后面再跟文件名。</p>
+<p>第二种方法：</p>
+<p>$ git rm -r –cached node_modules<br>1<br>Q2：如果我一开始就不想add node_modules文件，那我应该怎么把除了node_modules的其他文件add？</p>
+<p>Git提供了忽略文件.gitignore，当我们用git add .时，Git会自动排除.gitignore文件里匹配到的文件。</p>
+<p>在当前文件夹新建一个后缀名为gitignore的文件，如图：</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7rF5UMVz-1626577095183)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863916)]">https://segmentfault.com/img/remote/1460000022863916)]</a></p>
+<p>用记事本打开该文件，将node_modules填进去</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-QZenkJmz-1626577095185)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863919)]">https://segmentfault.com/img/remote/1460000022863919)]</a></p>
+<p>这样，我们执行git add .就不会把node_modules文件包含进去。得劲。</p>
+<p>将暂存区的文件提交到本地仓库。<br>$ git commit -m “这是提交时的注释”<br>1<br>-m后面跟的是本次提交的注释内容，一般是写本次提交或修改了什么，方便将来自己或他人查看。</p>
+<p>本地创建SSH KEY。<br>由于本地Git仓库和Github仓库之间的传输是通过SSH加密的，所以连接时需要两边都有SSH KEY。</p>
+<p>创建之前先看看你的电脑有没有创建过SSH KEY。先看一下你C盘用户目录下有没有.ssh目录，有的话里面有没有id_rsa和id_rsa.pub这两个文件，有就跳到下一步，没有就通过下面命令创建</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#101;&#109;&#x61;&#105;&#x6c;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#101;&#109;&#x61;&#105;&#x6c;&#64;&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>“<br>1<br>然后一路回车。这时你就会在用户下的.ssh目录里找到id_rsa和id_rsa.pub这两个文件</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-NGf2Mjtr-1626577095187)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863921)]">https://segmentfault.com/img/remote/1460000022863921)]</a></p>
+<p>Github添加SSH KEY。<br>登录Github,找到右上角的图标，打开点进里面的Settings，再选中里面的SSH and GPG KEYS，点击右上角的New SSH key，然后Title里面随便填，再把刚才id_rsa.pub里面的内容全部复制到Title下面的Key内容框里面，最后点击Add SSH key，这样就完成了SSH Key的加密。具体步骤也可看下面：</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-7ghKtL8g-1626577095188)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863924)]">https://segmentfault.com/img/remote/1460000022863924)]</a></p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-MxJwO4pO-1626577095190)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863928)]">https://segmentfault.com/img/remote/1460000022863928)]</a></p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-DXKpNK69-1626577095191)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863925)]">https://segmentfault.com/img/remote/1460000022863925)]</a></p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-PaTwenSQ-1626577095192)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863926)]">https://segmentfault.com/img/remote/1460000022863926)]</a></p>
+<p>在Github上新建一个仓库。<br>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-JQ4VM0HR-1626577095193)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863927)]">https://segmentfault.com/img/remote/1460000022863927)]</a></p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-iplN5Oql-1626577095194)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863930)]">https://segmentfault.com/img/remote/1460000022863930)]</a></p>
+<p>创建好之后，就跳到这个界面：</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-qAA6EwNp-1626577095195)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863929)]">https://segmentfault.com/img/remote/1460000022863929)]</a></p>
+<p>将本地仓库和远程仓库关联。<br>在本地仓库执行：</p>
+<p>$ git remote add origin <a href="mailto:&#103;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a>:BNK-ALONG&#x2F;teach-design-platform.git<br>1<br>origin后面就是刚刚创建好的远程仓库的地址。</p>
+<p>将本地仓库的东西推送到远程仓库。<br>刚刚我们只是将本地仓库和远程仓库进行了关联，但是两者的东西还没有同步，远程仓库还是空的。</p>
+<p>通过以下命令：</p>
+<p>$ git push -u origin master<br>1<br>由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：</p>
+<p>$ git push origin master<br>1<br>或者可以更简单的：</p>
+<p>$ git push<br>1<br>当然，这样会默认推送到主支干master。</p>
+<p>push完成之后：</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-5eFmBKUd-1626577095197)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863931)]">https://segmentfault.com/img/remote/1460000022863931)]</a></p>
+<p>这时候再重新进入刚才在Github新建的仓库，就可以看到本地仓库的项目已经上传成功了！大功告成🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉</p>
+<p>至此，将本地的一个新项目上传到Github的全过程就完成啦。</p>
+<p>补坑：</p>
+<p>如果在第9步新建一个Github仓库时，选择了</p>
+<p>Initialize this repository with a README（就是创建仓库的时候自动给你创建一个README.md文件），那么在push的时候，会报错</p>
+<p>error:failed to push some refs to <a target="_blank" rel="noopener" href="https://github.com/BNK-ALONG/teach-design-platform.git">https://github.com/BNK-ALONG/teach-design-platform.git</a><br>1<br>这是因为新建的Github仓库的README.md文件不在本地仓库的目录中，这是问题其实在多人协作开发中是一定存在的，多个人共同关联一个远程仓库，在把你本地的修改上传（push)之前，要把别人的代码更新到自己的本地仓库，不然怎么达到协作开发呢？</p>
+<p>将远程仓库最新的更新拉取到本地，并合并到主支干：</p>
+<p>$ git pull –rebase origin master<br>1<br>这时再重新push就可以成功了。<br>————————————————<br>版权声明：本文为CSDN博主「PlayCodes」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45893260/article/details/118874601">https://blog.csdn.net/qq_45893260/article/details/118874601</a></p>
+<p>#本地创建仓库</p>
+<pre><code class="git">git init
+</code></pre>
+<p>#添加项目到暂存区</p>
+<pre><code class="git">git add &quot;textname&quot;
+</code></pre>
+<p>#一键添加所有文件到暂存区</p>
+<pre><code class="git">git add.
+</code></pre>
+<p>#撤回已提交至暂存区的文件</p>
+<pre><code>git reset HEAD -- &quot;textname&quot;
+git rm -r --cached &quot;textname&quot;
+</code></pre>
+<p>#提交并添加注释内容</p>
+<pre><code class="git">git commit -m &quot;this is my first commit&quot;
+</code></pre>
+<p>#设置签名</p>
+<pre><code class="git">git config --global user.name &quot;Tom&quot;
+git config --global user.email &quot;tom@test.com&quot;
+</code></pre>
+<p>#查看当前设置</p>
+<pre><code>git config --list
+</code></pre>
+<p>#查看当前仓库状态</p>
+<pre><code class="git">git status
+</code></pre>
+<p>#本地仓库与远程仓库关联,origin后面就是刚刚创建好的远程仓库的地址。</p>
+<pre><code class="git">$ git remote add origin git@github.com:BNK-ALONG/teach-design-platform.git
+</code></pre>
+<p>将本地仓库的东西推送到远程仓库。<br>刚刚我们只是将本地仓库和远程仓库进行了关联，但是两者的东西还没有同步，远程仓库还是空的。</p>
+<p>通过以下命令：</p>
+<pre><code class="git">$ git push -u origin master
+</code></pre>
+<p>由于新建的远程仓库是空的，所以要加上-u这个参数，等远程仓库里面有了内容之后，下次再从本地库上传内容的时候只需下面这样就可以了：</p>
+<pre><code>$ git push origin master
+</code></pre>
+<p>或者可以更简单的：</p>
+<pre><code>$ git push
+</code></pre>
+<p>当然，这样会默认推送到主支干master。</p>
+<p>push完成之后：</p>
+<p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-5eFmBKUd-1626577095197)(<a target="_blank" rel="noopener" href="https://segmentfault.com/img/remote/1460000022863931)]">https://segmentfault.com/img/remote/1460000022863931)]</a></p>
+<p>这时候再重新进入刚才在Github新建的仓库，就可以看到本地仓库的项目已经上传成功了！大功告成🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉</p>
+<p>至此，将本地的一个新项目上传到Github的全过程就完成啦。</p>
+<p>补坑：</p>
+<p>如果在第9步新建一个Github仓库时，选择了</p>
+<blockquote>
+<p>Initialize this repository with a README（就是创建仓库的时候自动给你创建一个README.md文件），那么在push的时候，会报错</p>
+</blockquote>
+<blockquote>
+<p>error:failed to push some refs to <a target="_blank" rel="noopener" href="https://github.com/BNK-ALONG/teach-design-platform.git">https://github.com/BNK-ALONG/teach-design-platform.git</a></p>
+</blockquote>
+<p>这是因为新建的Github仓库的README.md文件不在本地仓库的目录中，这是问题其实在多人协作开发中是一定存在的，多个人共同关联一个远程仓库，在把你本地的修改上传（push)之前，要把别人的代码更新到自己的本地仓库，不然怎么达到协作开发呢？</p>
+<p>将远程仓库最新的更新拉取到本地，并合并到主支干：</p>
+<pre><code>$ git pull --rebase origin master
+</code></pre>
+<p>这时再重新push就可以成功了。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://shenqiangle.github.io">shenqiangle</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://shenqiangle.github.io/post/518e617c.html">https://shenqiangle.github.io/post/518e617c.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/git/">git</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/post/efb0fcb8.html"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">OS_xv6_labs</div></div></a></div><div class="next-post pull-right"><a href="/post/2eec1551.html"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">HTML</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">shenqiangle</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/cc1b9611.html" title="JavaScript"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript"/></a><div class="content"><a class="title" href="/post/cc1b9611.html" title="JavaScript">JavaScript</a><time datetime="2022-10-31T03:19:11.000Z" title="Created 2022-10-31 11:19:11">2022-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/ee69e452.html" title="CSS"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CSS"/></a><div class="content"><a class="title" href="/post/ee69e452.html" title="CSS">CSS</a><time datetime="2022-10-31T03:18:53.000Z" title="Created 2022-10-31 11:18:53">2022-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/53d0684b.html" title="Linux"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux"/></a><div class="content"><a class="title" href="/post/53d0684b.html" title="Linux">Linux</a><time datetime="2022-10-29T15:41:14.000Z" title="Created 2022-10-29 23:41:14">2022-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/efb0fcb8.html" title="OS_xv6_labs"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OS_xv6_labs"/></a><div class="content"><a class="title" href="/post/efb0fcb8.html" title="OS_xv6_labs">OS_xv6_labs</a><time datetime="2022-10-29T14:13:55.000Z" title="Created 2022-10-29 22:13:55">2022-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/518e617c.html" title="git"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git"/></a><div class="content"><a class="title" href="/post/518e617c.html" title="git">git</a><time datetime="2022-08-31T04:30:43.000Z" title="Created 2022-08-31 12:30:43">2022-08-31</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By shenqiangle</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
